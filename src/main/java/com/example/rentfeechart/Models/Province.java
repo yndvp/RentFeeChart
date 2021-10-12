@@ -7,17 +7,17 @@ public class Province {
     private int provinceId;
     private String name;
     private String capital;
-    private float population;
+    private int population;
     private float area;
     private float gdp;
 
-    public Province(int provinceId, String name, String capital, float population, float area, float gdp) {
-        this.provinceId = provinceId;
-        this.name = name;
-        this.capital = capital;
-        this.population = population;
-        this.area = area;
-        this.gdp = gdp;
+    public Province(String name, String capital, int population, float area, float gdp) {
+        setName(name);
+        setCapital(capital);
+        setPopulation(population);
+        setArea(area);
+        setGdp(gdp);
+        provinceId = 0;
     }
 
     public int getProvinceId() {
@@ -36,7 +36,7 @@ public class Province {
     }
 
     public void setName(String name) {
-        List<String> validProvinceNames = Arrays.asList("NT","BC","AB","SK","MB","ON","QC","NB","NL","NS");
+        List<String> validProvinceNames = Arrays.asList("NL","PE","NS","NB","QC","ON","MB","SK","AB","BC");
         if (validProvinceNames.contains(name))
             this.name = name;
         else
@@ -49,7 +49,7 @@ public class Province {
     }
 
     public void setCapital(String capital) {
-        List<String> validCapitalNames = Arrays.asList("Edmonton","Victoria","Winnipeg","Fredericton","St. John's","Halifax","Toronto","Charlottetown","Quebec City","Regina");
+        List<String> validCapitalNames = Arrays.asList("Edmonton","Victoria","Winnipeg","Fredericton","St. Johns","Halifax","Toronto","Charlottetown","Quebec City","Regina");
         if (validCapitalNames.contains(capital))
             this.capital = capital;
         else
@@ -57,11 +57,11 @@ public class Province {
                     validCapitalNames));
     }
 
-    public float getPopulation() {
+    public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(float population) {
+    public void setPopulation(int population) {
         if(population > 0)
             this.population = population;
         else
