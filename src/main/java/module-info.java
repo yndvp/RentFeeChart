@@ -6,4 +6,6 @@ module com.example.rentfeechart {
 
     opens com.example.rentfeechart to javafx.fxml;
     exports com.example.rentfeechart;
+    exports com.example.rentfeechart.Controllers;
+    opens com.example.rentfeechart.Controllers to javafx.fxml;
 }

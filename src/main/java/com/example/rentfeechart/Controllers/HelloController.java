@@ -1,4 +1,4 @@
-package com.example.rentfeechart;
+package com.example.rentfeechart.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
