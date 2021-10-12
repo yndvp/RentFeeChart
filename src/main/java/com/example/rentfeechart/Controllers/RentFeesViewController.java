@@ -1,14 +1,19 @@
 package com.example.rentfeechart.Controllers;
 
+import com.example.rentfeechart.Utilities.DBUtilities;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 
-public class RentFeesViewController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RentFeesViewController implements Initializable {
 
     @FXML
-    private BarChart<?, ?> barChart;
+    private BarChart<String, Integer> barChart;
 
     @FXML
     private CategoryAxis provinceAxis;
@@ -16,4 +21,12 @@ public class RentFeesViewController {
     @FXML
     private NumberAxis feesAxis;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        barChart.getData().addAll(DBUtilities.getRentFeesByProvince());
+        barChart.setLegendVisible(false);
+
+        provinceAxis.setLabel("Province names");
+        feesAxis.setLabel("Average of rent fees");
+    }
 }
