@@ -35,7 +35,7 @@ public class Province {
 
     /**
      * Set province id
-     * If id is not greater than, it will throw exception
+     * If id is not greater than 0, it will throw exception
      */
     public void setProvinceId(int provinceId) {
         if(provinceId > 0)

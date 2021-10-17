@@ -26,6 +26,7 @@ public class SQLGenerator {
                 Formatter formatter = new Formatter("rentFees.sql");
                 )
         {
+            // Loop 100 times for each province to create random data
             for (int i=1; i<=10; i++)
             {
                 for(int j=1; j<=100; j++)

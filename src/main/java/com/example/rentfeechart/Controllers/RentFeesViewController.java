@@ -22,13 +22,11 @@ public class RentFeesViewController implements Initializable {
     private NumberAxis feesAxis;
 
     /**
+     * Get data from DB and display it on the chart
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         barChart.getData().addAll(DBUtilities.getRentFeesByProvince());
         barChart.setLegendVisible(false);
-
-        provinceAxis.setLabel("Province names");
-        feesAxis.setLabel("Average of rent fees");
     }
 }
