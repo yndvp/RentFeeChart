@@ -13,17 +13,48 @@ public class Province {
     private int population;
     private float area;
     private float gdp;
+    private int rentFee;
+
+    public Province(String name, String capital, int population, float area, float gdp) {
+        this(name,capital,population,area,gdp,0);
+        provinceId = 0;
+    }
 
     /**
      * Province object constructor
      */
-    public Province(String name, String capital, int population, float area, float gdp) {
+    public Province(String name, String capital, int population, float area, float gdp, int rentFee) {
         setName(name);
         setCapital(capital);
         setPopulation(population);
         setArea(area);
         setGdp(gdp);
         provinceId = 0;
+        setName(name);
+        setCapital(capital);
+        setPopulation(population);
+        setArea(area);
+        setGdp(gdp);
+        provinceId = 0;
+        setRentFee(rentFee);
+    }
+
+    /**
+     * Get rent fee
+     */
+    public int getRentFee() {
+        return rentFee;
+    }
+
+    /**
+     * Set rent fee
+     * If rent fee is not greater than 0, it will throw exception
+     */
+    public void setRentFee(int rentFee) {
+        if(rentFee > 0)
+            this.rentFee = rentFee;
+        else
+            throw new IllegalArgumentException("rentFee must be greater than 0");
     }
 
     /**

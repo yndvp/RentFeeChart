@@ -1038,6 +1038,6 @@ FROM provinces INNER JOIN rentFees ON provinces.provinceId = rentFees.provinceId
 GROUP BY provinces.provinceId;
 
 -- Query for the table
-SELECT provinces.provinceId, name, capital, population, area, gdp, ROUND(AVG(fee)) AS 'Rent Fees' 
+SELECT provinces.provinceId, name, capital, population, area, gdp, ROUND(AVG(fee)) AS 'Rent Fee' 
 FROM provinces INNER JOIN rentFees ON provinces.provinceId = rentFees.provinceId 
 GROUP BY provinces.provinceId;

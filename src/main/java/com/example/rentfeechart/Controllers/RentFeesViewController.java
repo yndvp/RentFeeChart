@@ -1,12 +1,15 @@
 package com.example.rentfeechart.Controllers;
 
 import com.example.rentfeechart.Utilities.DBUtilities;
+import com.example.rentfeechart.Utilities.SceneChanger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,5 +31,10 @@ public class RentFeesViewController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         barChart.getData().addAll(DBUtilities.getRentFeesByProvince());
         barChart.setLegendVisible(false);
+    }
+
+    @FXML
+    private void viewTable(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event, "table-view.fxml", "Province Info with Rent Fees");
     }
 }
