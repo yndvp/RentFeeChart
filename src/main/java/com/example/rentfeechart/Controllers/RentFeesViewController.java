@@ -21,6 +21,8 @@ public class RentFeesViewController implements Initializable {
     @FXML
     private NumberAxis feesAxis;
 
+    /**
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         barChart.getData().addAll(DBUtilities.getRentFeesByProvince());
