@@ -13,22 +13,25 @@
    <children>
       <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
-            <Label id="header" prefHeight="59.0" prefWidth="51.0" text="Rent Fees" BorderPane.alignment="CENTER" />
+            <Label id="header" prefHeight="70.0" prefWidth="256.0" text="Rent Fees" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin></Label>
          </top>
          <center>
-            <BarChart fx:id="barChart" BorderPane.alignment="CENTER">
+            <BarChart fx:id="barChart" prefHeight="203.0" prefWidth="506.0" BorderPane.alignment="CENTER">
               <xAxis>
-                <CategoryAxis fx:id="provinceAxis" label="Province names" side="BOTTOM" />
+                <CategoryAxis fx:id="provinceAxis" label="Province" prefHeight="58.0" prefWidth="744.0" side="BOTTOM" />
               </xAxis>
               <yAxis>
-                <NumberAxis fx:id="feesAxis" label="Average of rent fees" side="LEFT" />
+                <NumberAxis fx:id="feesAxis" side="LEFT" />
               </yAxis>
             </BarChart>
          </center>
          <bottom>
-            <Button mnemonicParsing="false" onAction="#viewTable" prefHeight="40.0" prefWidth="150.0" text="View Table" BorderPane.alignment="CENTER">
+            <Button fx:id="button" mnemonicParsing="false" onAction="#viewTable" prefHeight="40.0" prefWidth="150.0" text="View Table" BorderPane.alignment="CENTER_RIGHT">
                <BorderPane.margin>
-                  <Insets bottom="20.0" top="20.0" />
+                  <Insets bottom="20.0" right="20.0" />
                </BorderPane.margin>
             </Button>
          </bottom>

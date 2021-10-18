@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: #f9a825;
+    -fx-font-family: "Arial Black";
+}
+#header {
+    -fx-font-family: Algerian;
+    -fx-font-size: 50px;
+    -fx-text-fill: #FFffff;
+}
+#feesAxis, #provinceAxis {
+    -fx-font-size: 16px;
+}
+#button{
+    -fx-font-size: 15px;
+    -fx-border-width: 3px;
+    -fx-background-color: #FFffff;
+    -fx-text-fill: #f9a825;
+}
+.chart-bar {
+    -fx-bar-fill: #558b2f;
+}
+.table-view {
+    -fx-border-color: #558c2f;
+    -fx-border-width: 5px;
+    -fx-border-style: solid;
+}
+.table-row-cell:odd {
+    -fx-background-color: #ffffff;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+.table-row-cell:even {
+    -fx-background-color: #ffecb3;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+

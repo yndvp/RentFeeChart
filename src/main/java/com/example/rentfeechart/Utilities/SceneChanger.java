@@ -10,6 +10,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SceneChanger {
+    /**
+     * This method makes it available to switch scenes
+     */
     public static void changeScenes(ActionEvent event, String fxmlFileLocation, String title) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(fxmlFileLocation));
         Scene scene = new Scene(fxmlLoader.load());

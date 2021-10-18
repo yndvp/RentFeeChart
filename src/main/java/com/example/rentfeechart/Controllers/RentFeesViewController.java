@@ -33,8 +33,11 @@ public class RentFeesViewController implements Initializable {
         barChart.setLegendVisible(false);
     }
 
+    /**
+     * This method changes scene to View Table
+     */
     @FXML
     private void viewTable(ActionEvent event) throws IOException {
-        SceneChanger.changeScenes(event, "table-view.fxml", "Province Info with Rent Fees");
+        SceneChanger.changeScenes(event, "table-view.fxml", "Rent Fees Table");
     }
 }

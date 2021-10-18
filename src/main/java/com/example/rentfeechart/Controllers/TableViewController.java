@@ -56,9 +56,12 @@ public class TableViewController implements Initializable {
         tableView.getItems().addAll(DBUtilities.getRentFeesDetails());
     }
 
+    /**
+     * This method changes scene to View Chart
+     */
     @FXML
     private void viewChart(ActionEvent event) throws IOException {
-        SceneChanger.changeScenes(event, "rent-fees-view.fxml", "Rent Fees Chart");
+        SceneChanger.changeScenes(event, "rent-fees-view.fxml", "Rent Fees");
     }
 }
 
