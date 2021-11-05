@@ -17,5 +17,5 @@ This is graphical user interface that allows users to read rent fee of each prov
 
 - **Table View**
   - RentFeesView controller takes data from mysql database and display it as a table through table-view.fxml
-![](images/table-view.png)
+![](img/table-view.png)
 
